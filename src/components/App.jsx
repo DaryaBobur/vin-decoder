@@ -1,16 +1,14 @@
-export const App = () => {
+import GeneralPage from 'pages/General';
+import { ToastContainer } from 'react-toastify';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      vin-decoder
+    <div>
+      <GeneralPage />
+
+      <ToastContainer autoClose={3000} theme={'colored'} />
     </div>
   );
 };
+
+export default App;
