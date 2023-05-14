@@ -1,9 +1,7 @@
-// import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const VinList = ({ items }) => {
   const item = items.data.Results;
-//   const location = useLocation();
 
   return (
     <ul>
