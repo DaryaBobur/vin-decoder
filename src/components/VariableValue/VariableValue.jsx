@@ -8,13 +8,16 @@ const VariablesValue = ({ items }) => {
   }
 
   return (
-    <ul>
-      {item.map(({ Name }) => (
-        <li key={Name}>
-          <p> {Name} </p>{' '}
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2>All the accepted values:</h2>
+      <ul>
+        {item.map(({ElementName, Name }) => (
+          <li key={Name}>
+            <p>{ElementName} - {Name} </p>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
