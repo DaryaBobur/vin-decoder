@@ -1,1 +1,1 @@
-daryabobur.github.io/vin-decoder/
+https://daryabobur.github.io/vin-decoder/
