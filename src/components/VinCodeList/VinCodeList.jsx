@@ -5,7 +5,7 @@ const VinCodeList = ({ codes }) => {
     <div>
         <h2>List codes</h2>
     <ul>
-      {codes.map(({ code, id }) => (
+      {codes.slice(0, 5).map(({ code, id }) => (
         <li key={id}>
           <p>VIN code : {code}</p>
         </li>
