@@ -56,7 +56,7 @@ const GeneralPage = () => {
 
     getSearchQuery();
   }, [vin]);
-  console.log(codes);
+
   return (
     <>
       <AppBar />
