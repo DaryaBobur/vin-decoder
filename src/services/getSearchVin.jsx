@@ -16,7 +16,9 @@ export const getSearchVariablesList = async () => {
   return result;
 };
 
-export const getVariableDescription = async({variableId} ) => {
-  const result = await axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/getvehiclevariablevalueslist/${variableId}?format=json`);
+export const getVariableDescription = async ({ variableId }) => {
+  const result = await axios.get(
+    `https://vpic.nhtsa.dot.gov/api/vehicles/getvehiclevariablevalueslist/${variableId}?format=json`
+  );
   return result;
 };
