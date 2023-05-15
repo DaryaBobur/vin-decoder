@@ -19,11 +19,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={SharedLayout} />
           <Route index element={<GeneralPage />} />
-          <Route path="/variables" element={<VariablesPage />}/>
-            <Route
-              path="/variables/:variableId"
-              element={<VariableDescription />}
-            />
+          <Route path="/variables" element={<VariablesPage />} />
+          <Route
+            path="/variables/:variableId"
+            element={<VariableDescription />}
+          />
           <Route path="*" element={<GeneralPage />} />
         </Routes>
       </Suspense>
