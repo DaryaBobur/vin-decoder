@@ -10,9 +10,7 @@ const FormSearchVin = ({ onSubmit, add }) => {
 
   const handleSearchQuery = e => {
     setSearchQuery(e.currentTarget.value.toLowerCase().trim());
-    setCode(e.target.value)
-
-
+    setCode(e.target.value);
   };
 
   const handleSubmit = e => {
@@ -28,32 +26,32 @@ const FormSearchVin = ({ onSubmit, add }) => {
     }
 
     onSubmit(searchQuery);
-    add({code});
-    
+    add({ code });
+
     resetForm();
   };
 
   const resetForm = () => {
     setSearchQuery('');
-    setCode('')
+    setCode('');
   };
-  console.log(searchQuery);
+  
   return (
-      <>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            autoComplete="off"
-            autoFocus
-            placeholder="Enter VIN"
-            onChange={handleSearchQuery}
-            name="searchQuery"
-            value={searchQuery}
-            // pattern= "/[^a-zA-Z0-9]/"
-          />
-          <button type="submit">Send</button>
-        </form>
-      </>
+    <>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          autoComplete="off"
+          autoFocus
+          placeholder="Enter VIN"
+          onChange={handleSearchQuery}
+          name="searchQuery"
+          value={searchQuery}
+          // pattern= "/[^a-zA-Z0-9]/"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </>
   );
 };
 
