@@ -4,20 +4,23 @@ const VinList = ({ items }) => {
   const item = items.data.Results;
 
   return (
-    <ul>
-      {item.map(
-        ({ Value, Variable, VariableId }) =>
-          Value !== null &&
-          Value !== '' &&
-          Value !== '0' && (
-            <li key={VariableId}>
-              <p>
-                {Value} : {Variable}
-              </p>
-            </li>
-          )
-      )}
-    </ul>
+    <>
+      <h2>Decode VIN code</h2>
+      <ul>
+        {item.map(
+          ({ Value, Variable, VariableId }) =>
+            Value !== null &&
+            Value !== '' &&
+            Value !== '0' && (
+              <li key={VariableId}>
+                <p>
+                 <b>Variable</b> : {Variable} - <b>Value</b> : {Value}
+                </p>
+              </li>
+            )
+        )}
+      </ul>
+    </>
   );
 };
 
