@@ -26,13 +26,12 @@
 }
 
 .codes-list__link {
-    text-decoration: none;
-    color: #000000;
-    transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: #000000;
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .codes-list__link:hover,
 .codes-list__link:focus {
-    color: #e7410e;
+  color: #e7410e;
 }
-
