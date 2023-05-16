@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { nanoid } from 'nanoid';
+
 import AppBar from 'components/AppBar/AppBar';
 import FormSearchVin from 'components/FormSearchVin/FormSearchVin';
 import VinList from 'components/VinList/VinList';
 import Loader from 'components/Loader/Loader';
-import { getSearchVin } from 'services/getSearchVin';
 import VinCodeList from 'components/VinList/VinCodeList/VinCodeList';
+
+import { getSearchVin } from 'services/getSearchVin';
 
 const GeneralPage = () => {
   const [items, setItems] = useState([]);
@@ -59,10 +61,10 @@ const GeneralPage = () => {
   return (
     <>
       <AppBar />
-      <FormSearchVin onSubmit={onChangeQuery} add={addCode} />
+      <FormSearchVin onSubmit={onChangeQuery} addCodes={addCode} />
       {codes.length !== 0 && <VinCodeList codes={codes} />}
-      {items.length !== 0 && <VinList items={items} />}
       {isLoading && <Loader />}
+      {items.length !== 0 && <VinList items={items} />}
       {error && <p>Please try again later!</p>}
     </>
   );
