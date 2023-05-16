@@ -1,0 +1,23 @@
+.btn-back {
+  display: flex;
+  align-items: center;
+  min-width: 30px;
+  border: 0;
+  padding: 2px 5px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: #dd8a0f;
+  cursor: pointer;
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-back:hover,
+.btn-back:focus {
+  background-color: #e7410e;
+  color: #fff;
+}
