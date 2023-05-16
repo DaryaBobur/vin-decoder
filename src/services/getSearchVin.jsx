@@ -18,7 +18,7 @@ export const getSearchVariablesList = async () => {
 
 export const getVariableDescription = async ({ variableId }) => {
   const result = await axios.get(
-    `https://vpic.nhtsa.dot.gov/api/vehicles/getvehiclevariablevalueslist/${variableId}?format=json`
+    `${BASE_URL}/vehicles/getvehiclevariablevalueslist/${variableId}?format=json`
   );
   return result;
 };
