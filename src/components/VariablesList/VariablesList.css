@@ -21,9 +21,15 @@
 .name-var {
   margin-bottom: 5px;
   font-size: 18px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .description-var {
-    font-size: 16px;
-    
+  font-size: 16px;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
 }
