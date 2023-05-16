@@ -6,7 +6,7 @@ import FormSearchVin from 'components/FormSearchVin/FormSearchVin';
 import VinList from 'components/VinList/VinList';
 import Loader from 'components/Loader/Loader';
 import { getSearchVin } from 'services/getSearchVin';
-import VinCodeList from 'components/VinCodeList/VinCodeList';
+import VinCodeList from 'components/VinList/VinCodeList/VinCodeList';
 
 const GeneralPage = () => {
   const [items, setItems] = useState([]);
@@ -61,11 +61,7 @@ const GeneralPage = () => {
       <AppBar />
       <FormSearchVin onSubmit={onChangeQuery} add={addCode} />
       {codes.length !== 0 && <VinCodeList codes={codes} />}
-      {items.length !== 0 && (
-        <div>
-          <VinList items={items} />
-        </div>
-      )}
+      {items.length !== 0 && <VinList items={items} />}
       {isLoading && <Loader />}
       {error && <p>Please try again later!</p>}
     </>
