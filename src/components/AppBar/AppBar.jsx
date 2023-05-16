@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import '../AppBar/AppBar.css';
 
 const navItems = [
   { href: '/', text: 'General' },
@@ -7,20 +8,22 @@ const navItems = [
 
 const AppBar = () => {
   return (
-    <header>
-      <ul>
+    <header className="header">
+      <ul className="nav-list">
         {navItems.map(({ href, text }) => {
           if (href.includes('/variables')) {
             return (
-              <li key={href}>
-                <NavLink to={href}>{text}</NavLink>
+              <li key={href} className="nav-list__item">
+                <NavLink to={href} className="nav-list__link">
+                  {text}
+                </NavLink>
               </li>
             );
           }
 
           return (
-            <li key={href}>
-              <NavLink to={href} end>
+            <li key={href} className="nav-list__item">
+              <NavLink to={href} className="nav-list__link" end>
                 {text}
               </NavLink>
             </li>
