@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+
 import AppBar from 'components/AppBar/AppBar';
 import Loader from 'components/Loader/Loader';
 import VariablesList from 'components/VariablesList/VariablesList';
+
 import { getSearchVariablesList } from 'services/getSearchVin';
 
 const VariablesPage = () => {
