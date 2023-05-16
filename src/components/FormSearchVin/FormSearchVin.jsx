@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import '../FormSearchVin/Form.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,7 +10,7 @@ const FormSearchVin = ({ onSubmit, add }) => {
 
   const handleSearchQuery = e => {
     setSearchQuery(e.currentTarget.value.toLowerCase().trim());
-    setCode(e.target.value);
+    setCode(e.target.value.toLowerCase().trim());
   };
 
   const handleSubmit = e => {
@@ -38,8 +38,8 @@ const FormSearchVin = ({ onSubmit, add }) => {
   
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
+      <form className='form' onSubmit={handleSubmit}>
+        <input className='input'
           type="text"
           autoComplete="off"
           autoFocus
@@ -49,7 +49,7 @@ const FormSearchVin = ({ onSubmit, add }) => {
           value={searchQuery}
           // pattern= "/[^a-zA-Z0-9]/"
         />
-        <button type="submit">Send</button>
+        <button className='btn-search' type="submit">Search</button>
       </form>
     </>
   );
