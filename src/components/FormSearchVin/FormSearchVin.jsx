@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../FormSearchVin/Form.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FcSearch } from "react-icons/fc";
 const FormSearchVin = ({ onSubmit, add }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [code, setCode] = useState('');
@@ -49,7 +49,7 @@ const FormSearchVin = ({ onSubmit, add }) => {
           value={searchQuery}
           // pattern= "/[^a-zA-Z0-9]/"
         />
-        <button className='btn-search' type="submit">Search</button>
+        <button className='btn-search' type="submit"><FcSearch fontSize={22}/></button>
       </form>
     </>
   );
