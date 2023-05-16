@@ -1,12 +1,12 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useParams, Outlet, useLocation, useNavigate } from 'react-router-dom';
+
 import AppBar from 'components/AppBar/AppBar';
 import Loader from 'components/Loader/Loader';
-import { getVariableDescription } from 'services/getSearchVin';
 import VariableValue from 'components/VariablesList/VariableValue/VariableValue';
-import { FcPrevious } from "react-icons/fc";
-import '../VariableDescription/VariableDescription.css'
-
+import { getVariableDescription } from 'services/getSearchVin';
+import { FcPrevious } from 'react-icons/fc';
+import '../VariableDescription/VariableDescription.css';
 
 const VariableDescription = () => {
   const [variable, setVariable] = useState(null);
@@ -45,8 +45,8 @@ const VariableDescription = () => {
     <>
       <AppBar />
       {variable && (
-        <button className='btn-back' type="button" onClick={goBack}>
-          <FcPrevious fontSize={16}/> go back
+        <button className="btn-back" type="button" onClick={goBack}>
+          <FcPrevious fontSize={16} /> go back
         </button>
       )}
       {variable && <VariableValue items={variable} />}
