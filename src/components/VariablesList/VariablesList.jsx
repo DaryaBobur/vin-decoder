@@ -13,7 +13,7 @@ const VariablesList = ({ items }) => {
           <NavLink className='variables-list__link' state={{ from: location }} to={`/variables/${ID}`}>
             <h3 className='name-var'>{Name}</h3>
           </NavLink>
-          <p> {Description} </p>
+          <p className='description-var'> {Description} </p>
         </li>
       ))}
     </ul>
