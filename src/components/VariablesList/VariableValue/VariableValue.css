@@ -1,0 +1,22 @@
+.text {
+font-size: 22px;
+font-weight: 700;
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.value-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.value-list__item:not(:last-child) {
+    margin-bottom: 10px;
+} 
+
+.value-list__item {
+    font-size: 16px;
+}
