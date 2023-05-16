@@ -1,0 +1,17 @@
+.title {
+  font-size: 22;
+  margin-bottom: 15px;
+}
+
+.decode-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.decode-list__item {
+    font-size: 16px;
+}
+
+.decode-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
