@@ -27,7 +27,6 @@ const GeneralPage = () => {
       code: data.code,
     };
     setCodes(prevState => [code, ...prevState]);
-    console.log(code);
   };
 
   const vin = searchParams.get('vin');
