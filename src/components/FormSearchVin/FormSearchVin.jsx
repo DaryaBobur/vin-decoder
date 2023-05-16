@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../FormSearchVin/Form.css'
+
+import '../FormSearchVin/Form.css';
+
+import { FcSearch } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FcSearch } from "react-icons/fc";
-const FormSearchVin = ({ onSubmit, add }) => {
+
+const FormSearchVin = ({ onSubmit, addCodes }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [code, setCode] = useState('');
 
@@ -20,13 +23,13 @@ const FormSearchVin = ({ onSubmit, add }) => {
     if (validationQuery === '') {
       toast.error('Please enter a VIN code!');
       return;
-    } else if (validationQuery.length < 17) {
+    } else if (validationQuery.length > 17) {
       toast.error('Please enter 17 character code');
       return;
     }
 
     onSubmit(searchQuery);
-    add({ code });
+    addCodes({ code });
 
     resetForm();
   };
@@ -35,11 +38,12 @@ const FormSearchVin = ({ onSubmit, add }) => {
     setSearchQuery('');
     setCode('');
   };
-  
+
   return (
     <>
-      <form className='form' onSubmit={handleSubmit}>
-        <input className='input'
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          className="input"
           type="text"
           autoComplete="off"
           autoFocus
@@ -47,9 +51,11 @@ const FormSearchVin = ({ onSubmit, add }) => {
           onChange={handleSearchQuery}
           name="searchQuery"
           value={searchQuery}
-          // pattern= "/[^a-zA-Z0-9]/"
+          pattern="^(?=\d*[a-zA-Z])(?=\D*\d)[a-zA-Z0-9]+$"
         />
-        <button className='btn-search' type="submit"><FcSearch fontSize={22}/></button>
+        <button className="btn-search" type="submit">
+          <FcSearch fontSize={22} />
+        </button>
       </form>
     </>
   );
@@ -57,6 +63,7 @@ const FormSearchVin = ({ onSubmit, add }) => {
 
 FormSearchVin.propTypes = {
   onSubmit: PropTypes.func,
+  addCodes: PropTypes.func,
 };
 
 export default FormSearchVin;
