@@ -27,8 +27,9 @@ const VariablesPage = () => {
   return (
     <>
       <AppBar />
-      {items.length !== 0 && <VariablesList items={items} />}
       {isLoading && <Loader />}
+      {items.length !== 0 && <VariablesList items={items} />}
+      
       {error && <p>Please try again later!</p>}
     </>
   );
