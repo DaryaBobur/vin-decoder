@@ -17,7 +17,7 @@ const VariablesList = ({ items }) => {
           >
             <h3 className="name-var">{Name}</h3>
           </NavLink>
-          <p className="description-var"dangerouslySetInnerHTML={{__html: Description}} ></p>
+          <div className="description-var"dangerouslySetInnerHTML={{__html: Description}} ></div>
         </li>
       ))}
     </ul>
